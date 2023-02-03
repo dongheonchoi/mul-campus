@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="out.css">
+    <script src="out.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="total">
+        <div id="top">
+            <ul>
+                <li>
+                    <a href="project1.html">회원가입
+                </li>
+                <li>
+                    <a href="project2.html">서비스</a>
+                </li>
+            </ul>
+        </div>
+        <div id="top2" align="center">
+            <br>
+            <br>
+            <a href="project3.html">찾아오시는길</a>
+        </div>
+
+        <div id="center">
+
+            <div id="map" style="width: 500px; height:500px;"></div>
+
+            <script type="text/javascript"
+                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a16c5a58b45461afebe2001ae5dc3085"></script>
+            <script>
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                    mapOption = {
+                        center: new kakao.maps.LatLng(37.26481701706137,127.04860235516956), // 지도의 중심좌표
+                        level: 1 // 지도의 확대 레벨
+                    };
+
+                // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+                var map = new kakao.maps.Map(mapContainer, mapOption); 
+            </script>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
