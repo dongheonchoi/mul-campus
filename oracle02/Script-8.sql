@@ -1,0 +1,9 @@
+DROP TABLE "recommend"
+
+
+CREATE TABLE "HR"."recommend"(
+	"RE_NO" NUMBER(38,0),
+	"TITLE" VARCHAR2(100),
+	"CONTENT" VARCHAR2(100),
+	"WRITER" VARCHAR2(100)
+)
