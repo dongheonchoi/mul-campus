@@ -4,7 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class MemberDAO2 {
+import 화면DB연결.MemberVO;
+
+public class MemberDAO3 {
 	
 	//DAO는 DAO의 역활만을 수행하는것이 다른것과의 사용성이 좋다
 	public int delete(String id) {
@@ -48,7 +50,7 @@ public class MemberDAO2 {
 		return result;
 	}
 
-	public int update(String id, String tel) {
+	public int update(MemberVO bag) {
 		int result = 0;
 		try {
 			// 1.오라클 11g와 연결한 부품 설정
@@ -73,8 +75,8 @@ public class MemberDAO2 {
 			String sql = "update hr.MEMBER set tel = ? where id = ?";
 			PreparedStatement ps = con.prepareStatement(sql); // con부품으로
 			// sql스트링에 있는 것을 SQL부품으로 만들어 달라고 요펑한 부분
-			ps.setString(1, tel);
-			ps.setString(2, id);
+			ps.setString(1, bag.getTel());
+			ps.setString(2, bag.getId());
 
 			System.out.println("3. SQL문 부품(객체)으로 만들기 성공.");
 
@@ -90,7 +92,7 @@ public class MemberDAO2 {
 		return result;
 	}
 
-	public int insert(String id, String pw, String name, String tel) {
+	public int insert(MemberVO bag) { //1.가방을 받아서 변수에 넣기
 		int result = 0;
 		try {
 			// 1.오라클 11g와 연결한 부품 설정
@@ -118,10 +120,10 @@ public class MemberDAO2 {
 
 			// R빼고, 인덱스 0부터 시작!!
 			// 유일하게 DB은 인덱스가 1부터 시작
-			ps.setString(1, id); // SQL부품인 ps에 첫번째 ?에 받아온 id 값을 넣는다
-			ps.setString(2, pw); // SQL부품인 ps에 두번째 ?에 받아온 pw 값을 넣는다
-			ps.setString(3, name); // SQL부품인 ps에 세번째 ?에 받아온 name 값을 넣는다
-			ps.setString(4, tel); // SQL부품인 ps에 네번째 ?에 받아온 tel 값을 넣는다
+			ps.setString(1, bag.getId()); // SQL부품인 ps에 첫번째 ?에 받아온 id 값을 넣는다
+			ps.setString(2, bag.getPw()); // SQL부품인 ps에 두번째 ?에 받아온 pw 값을 넣는다
+			ps.setString(3, bag.getName()); // SQL부품인 ps에 세번째 ?에 받아온 name 값을 넣는다
+			ps.setString(4, bag.getTel()); // SQL부품인 ps에 네번째 ?에 받아온 tel 값을 넣는다
 
 			System.out.println("3. SQL문 부품(객체)으로 만들기 성공.");
 
