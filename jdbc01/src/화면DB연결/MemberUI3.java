@@ -15,9 +15,9 @@ import javax.swing.JTextField;
 import 자바DB연결.MemberDAO2;
 import 자바DB연결.MemberDAO3;
 
-public class MemberUI2 {
+public class MemberUI3 {
 
-	public static void main(String[] args) {
+	public static void open() {
 		JFrame f = new JFrame();
 		f.setTitle("나의 회원가입");
 		f.setSize(400, 900);

@@ -16,9 +16,9 @@ import 자바DB연결.BbsDAO;
 import 자바DB연결.MemberDAO2;
 import 자바DB연결.MemberDAO3;
 
-public class BbsUI {
+public class BbsUI2 {
 
-	public static void main(String[] args) {
+	public static void open() {
 		JFrame f = new JFrame();
 		f.setTitle("나의 회원가입");
 		f.setSize(400, 900);
