@@ -35,8 +35,11 @@ public class miniprojectDAO {
 
 			Connection con = DriverManager.getConnection(url, user, password);
 			System.out.println("2. 오라클 연결 성공.");
-
-			String sql = "select * from hr.BOOKLIST where " + wy + " is not null ORDER BY " + wy;  // " " + string 변수  + " "; 된다!
+			
+			// " " + string 변수  + " "; 사용 가능
+			// "WEEKNO" or "YEARNO"를 받아와 상황에 맞는 데이터를 가져온다.
+			// best 순위를 정하기 위해 오름 차순으로 받아 오기
+			String sql = "select * from hr.BOOKLIST where " + wy + " is not null ORDER BY " + wy; 
 			
 			PreparedStatement ps = con.prepareStatement(sql); // con부품으로
 			// sql스트링에 있는 것을 SQL부품으로 만들어 달라고 요펑한 부분

@@ -25,6 +25,7 @@ public class miniprojectUI3 {
 	public static void main(String[] args) {
 
 		Font font = new Font("D2Coding", Font.BOLD, 20);
+		Font font2 = new Font("D2Coding", Font.BOLD, 40);
 			
 
 		
@@ -32,7 +33,7 @@ public class miniprojectUI3 {
 		f.setSize(1000, 700);
 		f.getContentPane().setBackground(Color.white);
 
-		f.setLayout(new FlowLayout());
+//		f.setLayout(new FlowLayout());
 //		f.add();
 
 		JLabel l1 = new JLabel();
@@ -50,12 +51,11 @@ public class miniprojectUI3 {
 		}
 
 		JLabel l3 = new JLabel((String) all[index][3]);
-		JLabel l4 = new JLabel(
-				(String) all[index][5] + "·" + all[index][6] + "·" + all[index][7].toString().substring(0, 10));
+		JLabel l4 = new JLabel((String) all[index][5] + "·" + all[index][6] + "·" + all[index][7].toString().substring(0, 10));
 		JLabel imageLabel = new JLabel();
 		ImageIcon icon = new ImageIcon((String) all[index][8]);
-
 		imageLabel.setIcon(icon);
+
 
 		JButton b1 = new JButton("주간 추천");
 		JButton b2 = new JButton("연간 추천");
@@ -65,6 +65,9 @@ public class miniprojectUI3 {
 		JButton b6 = new JButton("구매");
 		
 		
+		// 연간 추천  or 주간 추천 버튼을 누르는 경우 같은 페이지에서 실행시키기 위해
+		// 버튼을 누르는 경우 해당하는 버튼의 데이터를 받아와 같은페이지에 실행 시켜준다.
+		// 그러기 위해서 변수 all을 static으로 선언
 		b1.addActionListener(new ActionListener() {
 			
 			@Override
@@ -75,6 +78,7 @@ public class miniprojectUI3 {
 				l1.setText("주간 추천 도서");
 				l2.setText("best" + all[index][1]);
 				l3.setText((String) all[index][3]);
+				// 오라클의 date는  시분초까지 받아옴으로 스트링으로 변화시킨후 YYYY.MM.DD 만큼 substring
 				l4.setText((String) all[index][5] + "·" + all[index][6] + "·" + all[index][7].toString().substring(0, 10));
 				ImageIcon icon = new ImageIcon((String) all[index][8]);
 				imageLabel.setIcon(icon);
@@ -160,8 +164,26 @@ public class miniprojectUI3 {
 				}
 			}
 		});
-
-		l1.setFont(font);
+		f.setLayout(null);
+		l1.setBounds(350, 30, 600, 50);
+		l2.setBounds(500, 210, 600, 50);
+		l3.setBounds(500, 300, 600, 50);
+		l4.setBounds(500, 400, 600, 50);
+		imageLabel.setBounds(340, 180, 500, 300);
+		b1.setBounds(50, 80, 125, 40);
+		b2.setBounds(175, 80, 125, 40);
+		b3.setBounds(0, 300, 80, 40);
+		b4.setBounds(915, 300, 80, 40);
+		b5.setBounds(400, 600, 80, 40);
+		b6.setBounds(500, 600, 80, 40);
+		
+		
+		
+		
+		
+		
+		
+		l1.setFont(font2);
 		l2.setFont(font);
 		l3.setFont(font);
 		l4.setFont(font);
@@ -173,6 +195,9 @@ public class miniprojectUI3 {
 		b5.setFont(font);
 		b6.setFont(font);
 
+		
+		
+		
 		f.add(l1);
 		f.add(l2);
 		f.add(l3);
