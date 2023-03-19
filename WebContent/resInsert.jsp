@@ -28,7 +28,7 @@ body {
 <hr color = "red">
 등록한 음식점 : <%=bag.getName() %><br>
 등록한 대표메뉴 : <%=bag.getMenu() %><br>
-등록한 가격 : <%= bag.getPrice() %><br>
+등록한 가격 : <%= bag.getPrice() %><br> 
 등록한 이미지 : <img src="img/<%=bag.getImg()%>" width=200 height=200><br>
 </body>
 </html>

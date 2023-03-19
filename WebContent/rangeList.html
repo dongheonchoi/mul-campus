@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body { /* 컨트롤 + / - 자동주석, 태그선택! */
+	background: #037BFC;
+}
+
+button {
+	background: #18DE02;
+}
+
+.t1 { /* .은 클래스 선택!, 여러개선택!  */
+	background: yellow;
+	width: 150px;
+	text-align: center;
+}
+
+#b1 { /* #은 아이디 선택!, 특정한 것 한 개만 선택! */
+	color: red;
+}
+#b2{
+	color: blue;
+	
+}
+</style>
+</head>
+<body>
+<!-- no, title, content, writer 게시판글쓰기  -->
+	<h3>범위 검색</h3>
+	<hr>
+	<form action="rangeList.jsp">
+		<table border="1">
+			<tr>
+				<td colspan = "2" class="t1">가격의 범위를 입력하세요 </td>
+			</tr>
+			<tr>
+				<td class="t1">시작 범위 </td>
+				<td><input name="startPrice"></td>
+			</tr>
+			<tr>
+				<td class="t1">끝 범위 :</td>
+				<td><input name="endPrice"></td>
+			</tr>
+			<tr>
+				<td class="t1">location :</td>
+				<td><input name="location" ></td>
+			</tr>
+			<tr>
+				<td class="t1">director :</td>
+				<td><input name="director"></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="t1">
+					<button id="b2">영화 정보 데이터 전송</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
