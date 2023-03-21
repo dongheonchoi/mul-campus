@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function Check(){
+		name = document.getElementById("name").value
+		com = document.getElementById("com").value
+		posi = document.getElementById("posi").value
+		gen = document.getElementById("gen").value
+		
+		resultTag = document.getElementById("result")
+		result2Tag = document.getElementById("result2")
+		//id가 result인 태그를 가지고 와주세요. <div id = result ></div>
+		
+		resultTag.innerHTML = com + '회사에 ' + posi +'으로 있는 ' + name + '입니다.'
+		
+		if(gen == "남자" || gen == "남"){
+			//alert('로그인 성공')
+			//resultTag.innerHTML = '<b>로그인 성공</b>'
+			result2Tag.innerHTML = '<img src = img/man.jpg width=300 height=200>'
+		}else{
+			//alert('로그인 실패')
+			//resultTag.innerHTML = '<b>로그인 실패</b>'
+			result2Tag.innerHTML = '<img src = img/woman.jpg width=300 height=200>'
+		}
+	}
+
+
+
+
+</script>
+
+</head>
+<body>
+	이름 입력 : <input id='name' value='홍길동'>
+	<br>
+	 회사명 입력 : <input id='com' value='멀티'>
+	 <br>
+	직책 입력 : <input id='posi' value='사원'>
+	<br>
+	 성별 입력 : <input id='gen' value='남'>
+	 <br>
+	<button onclick="Check()">확인</button>
+	<br>
+	
+	<div id = "result" style = "color: red;  width: 800px; height: 50px; font-size: 30px;"> 결과 넣는 곳 </div>
+	<div id = "result2" style = "color: red; width: 500px; height: 50px; font-size: 30px;"> 결과 넣는 곳 </div>
+
+</body>
+</html>

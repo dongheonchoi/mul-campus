@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function idCheck(){
+		id = document.getElementById("id").value
+		
+		resultTag = document.getElementById("result")
+		//id가 result인 태그를 가지고 와주세요. <div id = result ></div>
+		if(id.length >= 5){
+			//alert('로그인 성공')
+			//resultTag.innerHTML = '<b>로그인 성공</b>'
+			resultTag.innerHTML = '<img src = img/yes.jpg width=300 height=200>'
+		}else{
+			//alert('로그인 실패')
+			//resultTag.innerHTML = '<b>로그인 실패</b>'
+			resultTag.innerHTML = '<img src = img/no.jpg width=300 height=200>'
+		}
+	}
+
+function pwCheck(){
+		pw = document.getElementById("pw").value
+		pw2 = document.getElementById("pw2").value
+		resultTag = document.getElementById("result")
+		if (pw == pw2) {
+			//resultTag.innerHTML = '<img src = img/yes.jpg width=300 height=200>'			
+			location.href = "http://www.naver.com"
+		} else {
+			//resultTag.innerHTML = '<img src = img/no.jpg width=300 height=200>'
+			location.href = "http://www.daum.net"
+		}
+		
+}
+
+</script>
+
+</head>
+<body>
+	아이디 입력 : <input id='id' value='root'>
+	<button onclick="idCheck()">글자수 체크</button>
+	<br>
+	 패스워드 입력 : <input id='pw' value='test'>
+	 <br>
+	 패스워드2 입력 : <input id='pw2' value='test'>
+	<button onclick="pwCheck()">패스워드 체크</button>
+	<br>
+	
+	<div id = "result" style = "color: red; background: yellow; width: 500px; height: 50px; font-size: 30px;"> 결과 넣는 곳 </div>
+
+</body>
+</html>
