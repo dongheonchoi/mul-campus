@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	function bag(){
+		first = document.getElementById("first").value
+		
+		resultTag = document.getElementById("result")
+		//id가 result인 태그를 가지고 와주세요. <div id = result ></div>
+		
+		
+		if(first == "휴대폰"){
+			resultTag.innerHTML = '<img src = img/phone.jpg width=300 height=200>'
+		}else if(first == "시계"){
+			resultTag.innerHTML = '<img src = img/watch.jpg width=300 height=200>'
+		}else{
+			resultTag.innerHTML = '<img src = img/ok.jpg width=300 height=200>'
+			
+		}
+	}
+	function bag2(){
+		second = document.getElementById("second").value
+		if(second == "시계"){
+			location.href = "https://www.casio.com/kr/watches/"		
+		}else if(second == "가방"){
+			location.href = "https://www.mandarinaduck.co.kr/"
+		}
+		
+	}
+
+
+
+</script>
+
+</head>
+<body>
+	가장 중요한것 입력 : <input id='first' value='휴대폰'>
+	<button onclick="bag()">제일 중요한 것 확인</button>
+	<br>
+	 두번째로 중요한것 입력 : <input id='second' value='시계'>
+	<button onclick="bag2()">두번째로 중요한 것 확인</button>
+	 <br>
+	
+	
+	<div id = "result" style = "color: red;  width: 800px; height: 50px; font-size: 30px;"> 결과 넣는 곳 </div>
+
+</body>
+</html>
