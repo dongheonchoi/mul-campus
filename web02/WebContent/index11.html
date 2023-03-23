@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+	$(function() { //jqeury기본 사용법!
+		
+		$("#b1").click(function() {
+			i2 = $('#in2').val() //1
+			divTag = $('#result') //div 태그 전체를 의미
+			divTag.append(i2 + '<br>') //기존의 것은 두고 추가를 한다.
+		})
+		$("#b2").click(function() {
+			
+			divTag = $('#result') //div 태그 전체를 의미
+			divTag.append('<img src = img/no.jpg width=300 height=200><br>') //기존의 것은 두고 추가를 한다.
+		})
+
+	})
+</script>
+</head>
+<body>
+입력내용 : <input id = "in2" value = "1" style = "background: yellow"><br>
+<button id = "b1">글자 추가</button>
+<button id = "b2">자동차 추가</button>
+<hr color="red">
+<div id = "result"></div>
+<br>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+	$(function() { //jqeury기본 사용법!
+		//alert("body부분을 dom tree로 ram에 읽어들였음.!!")
+		//document.getElementById("today") ==> $("#today")
+		//콜백함수
+		$("#b1").click(function() {
+			alert("b1이 클릭되었음.") //실행할 내용 정의!(함수 정의!)
+			//태그 사이의 글자가 있는 경우와 input태그의 값이 있는 경우는 다르다.
+			t1 = $('#text1').text() //get의 의미!!
+			alert('가지고 온 값은 ' + t1)
+		})
+		$("#b2").click(function() {
+			alert("b2이 클릭되었음.") //실행할 내용 정의!(함수 정의!)
+			t2 = $("#text2").val()
+			alert("가기고 온 값 은 " + t2)
+		})
+		$("#b3").click(function() {
+			alert("b3이 클릭되었음.") //실행할 내용 정의!(함수 정의!)
+			//set의 의미
+			$('#text3').text('이게 들어가네요')
+			$('#text4').val('이번에는 이걸 넣을게요')
+		})
+	
+	
+	})
+</script>
+</head>
+<body>
+<!-- 오늘 요일 : <input id = "today" value = "목"> -->
+<h3 id = "text1">나는 1번의 텍스트</h3><br>
+<input id = "text2" value = "나는 2번의 값... "><br>
+
+<h3 id = "text3">여기 결과가 들어갈 곳</h3><br>
+<input id = "text4" style = 'background: yellow'><br>
+
+<button id = "b1"> b1실행 </button>
+<button id = "b2"> b2실행 </button>
+<button id = "b3"> b3실행 </button>
+</body>
+</html>
