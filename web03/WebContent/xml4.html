@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#b1').click(function() {
+			$.ajax({
+				url : "data/dataset2.xml",
+				success : function(doc) {
+					alert("xml요청 성공 >> " + doc)
+					list = $(doc).find('record') //find의 결과는 여러개 (배열)
+					alert(list.length)
+					for(i = 0; i<list.length; i++){
+						//console.log($(list[i]).find("name").text())
+						//console.log($(list[i]).find("tel"))
+						id =$(list[i]).find("id").text()
+						first_name =$(list[i]).find("first_name").text()
+						last_name =$(list[i]).find("last_name").text()
+						model =$(list[i]).find("model").text()
+						datetime =$(list[i]).find("datetime").text()
+						$('#result').append(id + ", "+ first_name + ", " + last_name 
+								+ ", " + model + ', ' + datetime +"<br>")
+						$.ajax({
+							url : "mock2.jsp",
+							//async : "false", //동기식 비동기식
+							data : {
+								id : id,
+								first_name : first_name,
+								last_name : last_name,
+								model : model,
+								datetime : datetime	
+							},
+							success: function() {
+								console.log("넣기 성공")
+							}
+							
+						})
+					}
+				
+				}
+			})
+		})
+	})
+	
+</script>
+
+</head>
+<body>
+	
+	<button style="color: magenta; background: pink;" id='b1'>XML받아오기</button>
+
+	<div id="result">결과창<br></div>
+
+
+
+</body>
+</html>
