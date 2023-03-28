@@ -30,6 +30,6 @@
 가입 id: <%= id%><br>
 가입 pw: <%= pw%><br>
 가입 name: <%= name%><br>
-가입 tel: <%= tel%><br>>
+가입 tel: <%= tel%><br>
 </body>
 </html>
