@@ -12,9 +12,7 @@ body{
 </style>
 </head>
 <body>
-${bag.no}<br>
-${bag.title}<br>
-${bag.content}<br>
-${bag.writer}<br>
+드라마 장르.<br>
+<img src="resources/img/drama.jpg" width = "250" height="300">
 </body>
 </html>

@@ -12,9 +12,6 @@ body{
 </style>
 </head>
 <body>
-${bag.no}<br>
-${bag.title}<br>
-${bag.content}<br>
-${bag.writer}<br>
+로그인 처리 요청이 완료되었습니다.
 </body>
 </html>

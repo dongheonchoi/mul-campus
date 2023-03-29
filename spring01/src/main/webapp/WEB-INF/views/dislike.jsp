@@ -12,9 +12,7 @@ body{
 </style>
 </head>
 <body>
-${bag.no}<br>
-${bag.title}<br>
-${bag.content}<br>
-${bag.writer}<br>
+커피 싫어<br>
+<img src="resources/img/coffee.jpg" width = "250" height="300">
 </body>
 </html>

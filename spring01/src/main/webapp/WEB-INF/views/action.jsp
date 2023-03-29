@@ -12,9 +12,7 @@ body{
 </style>
 </head>
 <body>
-${bag.no}<br>
-${bag.title}<br>
-${bag.content}<br>
-${bag.writer}<br>
+액션영화입니다.<br>
+<img src="resources/img/action.jpg" width = "250" height="300">
 </body>
 </html>

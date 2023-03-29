@@ -12,9 +12,7 @@ body{
 </style>
 </head>
 <body>
-${bag.no}<br>
-${bag.title}<br>
-${bag.content}<br>
-${bag.writer}<br>
+로그인 처리성공.<br>
+<img src="resources/img/yes.jpg" width = "250" height="300">
 </body>
 </html>

@@ -12,9 +12,10 @@ body{
 </style>
 </head>
 <body>
-${bag.no}<br>
-${bag.title}<br>
-${bag.content}<br>
-${bag.writer}<br>
+책 등록이 완료 되었습니다.<br>
+책이름${bag.name}<br>
+책 주소${bag.url}<br>
+검색한 이미지 >> <img src="resources/img/${bag.img}" width="250" height="200">
+
 </body>
 </html>
