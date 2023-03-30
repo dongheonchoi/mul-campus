@@ -8,6 +8,9 @@
 </head>
 <body>
 <h3>게시판 화면입니다. </h3>
+
+<a href ="list2">모든 게시판 리스트 가지고 오기</a>
+
 <hr color="red">
 <form action="insert2.multi" method="get">
 	no : <input name="no" value="1"><br>

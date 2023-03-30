@@ -5,13 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style >
-body{
-	background: yellow
-}
-</style>
 </head>
 <body>
-사이트삭제 처리 요청이 완료되었습니다.
+로그인한 사람의 id는<%= session.getAttribute("user") %><br>
+현재 오늘 방문 횟수는<%= session.getAttribute("count") %><br>
 </body>
 </html>

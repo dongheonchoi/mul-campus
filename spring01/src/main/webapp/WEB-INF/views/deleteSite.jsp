@@ -12,6 +12,7 @@ body{
 </style>
 </head>
 <body>
-사이트삭제 처리 요청이 완료되었습니다.
+사이트 삭제가 완료되었습니다.
+<a href=“site.jsp”>메인으로 돌아가기</a><br> 
 </body>
 </html>

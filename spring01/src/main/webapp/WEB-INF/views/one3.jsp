@@ -12,6 +12,9 @@ body{
 </style>
 </head>
 <body>
-사이트삭제 처리 요청이 완료되었습니다.
+${bag.id}<br>
+${bag.name}<br>
+${bag.url}<br>
+${bag.img}<br>
 </body>
 </html>

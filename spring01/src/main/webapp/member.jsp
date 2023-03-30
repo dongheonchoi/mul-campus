@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<a href ="list">모든 멤버 리스트 가지고 오기</a>
+
 <h3>로그인 화면입니다. </h3>
 <hr color="red">
 <form action="login" method="get">
@@ -44,13 +46,17 @@
 </form>
 <hr color="red">
 
+
 <h3>회원검색 화면입니다. </h3>
+<a href = "one?id=apple"></a>
 <hr color="red">
 <form action="one" method="get">
 	id : <input name="id" value="apple"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr color="red">
+
+
 
 <button type="button">먹통버튼(아무 기능이 없음)</button>
 </body>

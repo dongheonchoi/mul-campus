@@ -8,6 +8,9 @@
 </head>
 <body>
 <h3>책등록 화면입니다. </h3>
+
+<a href ="list3">모든 책 가져오기</a>
+
 <hr color="red">
 <form action="book" method="get">
 	책 이름 : <input name="name" value="드라마"><br>

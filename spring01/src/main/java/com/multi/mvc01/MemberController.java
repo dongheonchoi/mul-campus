@@ -1,16 +1,22 @@
 package com.multi.mvc01;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller //스프링에서 제어해주는 역활을한다.
+@Controller //스프링에서 제어해주는 역활을한다. dependency
 public class MemberController {
-	@Autowired
+	
+	//MemberDAO의 싱글톤 객체 ram의 어디에 있는지 찾아서 그주사를
+	//아래 변수에 넣어주세요
+	@Autowired  //DI (Dependency injection) dmlwhstjd wndlq
 	MemberDAO dao; //전역 변수(글로벌 변수)
 	@Autowired
 	BookDAO dao2;
+	
 	
 	//컨트롤 하는 기능 (CRUD)
 	//회원가입, 수정, 탈퇴, 정보검색
@@ -80,9 +86,11 @@ public class MemberController {
 	}
 	
 	@RequestMapping("list") 
-	public void list(MemberVO bag) {
+	public void list(Model model) {
+		//Model은 컨트롤러의 list를 views/list.jsp까지만 전달할 수 있는 객체
 		System.out.println("list 요청됨.");
-		System.out.println(bag);
+		ArrayList<MemberVO> list = dao.list();
+		model.addAttribute("list",list);
 	}
 
 }

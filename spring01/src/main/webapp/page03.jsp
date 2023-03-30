@@ -5,13 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style >
-body{
-	background: yellow
-}
-</style>
 </head>
 <body>
-사이트삭제 처리 요청이 완료되었습니다.
+<%
+	session.setAttribute("view", 100);
+%>
+<hr>서버에 세션 속성등록함.
+<a href="page04.jsp">session속성가지고오기</a>
 </body>
 </html>
