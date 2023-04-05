@@ -11,7 +11,7 @@ $(function() {
 	$('#b1').click(function() {
 		$.ajax({
 			crossOrigin: true,
-			url: "http://api.openweathermap.org/data/2.5/weather?q=suwon&appid=f533c5b4dfcf415738d75292f8e315b7",
+			url: "http://api.openweathermap.org/data/2.5/weather?q=suwon&appid=id",
 			dataType: 'json',
 			success: function(x) {
 				console.log(x);
