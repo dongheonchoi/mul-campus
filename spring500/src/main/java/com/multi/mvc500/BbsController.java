@@ -60,7 +60,15 @@ public class BbsController {
 		System.out.println(bag);
 		return bag;
 	}
+	
+	@RequestMapping("one2")
+	public void on2e(int no, Model model) {
+		System.out.println("one요청됨.");
+		System.out.println(no);
+		BbsVO bag = dao.one(no);
+		model.addAttribute("bag" ,bag);
 
+	}
 	
 	@RequestMapping("list2")
 	public void list(Model model) {

@@ -48,7 +48,6 @@
 
 
 <h3>회원검색 화면입니다. </h3>
-<a href = "one?id=apple"></a>
 <hr color="red">
 <form action="one" method="get">
 	id : <input name="id" value="apple"><br>

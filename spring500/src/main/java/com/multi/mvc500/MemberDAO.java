@@ -40,12 +40,12 @@ public class MemberDAO { // CRUD
 //	// 메서드를 만드는 것 ==> 메서드 정의(define)!
 //	// 메서드를 정의했다고 실행되는 것은 아니다.!
 //	// 메서드를 쓰는 것 ==> 메서드 호출(call)!
-//	public MemberVO one(String id) {
-//		
-//		return bag;
-//
-//	}
-//
+	public MemberVO one(String id) {
+		MemberVO bag = my.selectOne("member.one", id);
+		return bag;
+
+	}
+
 	public int delete(String id) {
 		
 		int result = my.delete("member.del", id);

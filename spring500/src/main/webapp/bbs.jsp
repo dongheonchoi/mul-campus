@@ -16,7 +16,7 @@
 <h3>게시판 등록화면입니다.</h3>
 <hr color="red">
 <form action="insert2.multi" method="get">
-	no : <input name="no" value="1"><br>
+	<!-- no : <input name="no" value="1"><br> --> <!-- auto increment -->
 	title : <input name="title" value="1234"><br>
 	content : <input name="content" value="park"><br>
 	writer : <input name="writer" value="${id}"><br>
@@ -49,7 +49,7 @@
 
 <h3>게시판검색 화면입니다. </h3>
 <hr color="red">
-<form action="one2.multi" method="get">
+<form action="one2" method="get">
 	no : <input name="no" value="1"><br>
 	<button type="submit">서버로 전송</button>
 </form>
