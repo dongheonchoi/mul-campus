@@ -1,6 +1,7 @@
 package com.multi.mvc901;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -76,10 +77,10 @@ public class MemberController {
 	public void one(String id, Model model) {
 		System.out.println("one요청됨.");
 		System.out.println(id);
-		//MemberVO bag = dao.one(id);
+		MemberVO vo = dao.one(id);
 		//bag에 검색결과 다 들어있음.
 		//views아래 one.jsp로 쓸 수 있도록 설정해주어야 함.
-		//model.addAttribute("bag", bag);
+		model.addAttribute("vo", vo); //속성으로 지정
 		//views까지 전달할 속성으로 추가해주세요. 
 	}
 	
@@ -98,8 +99,8 @@ public class MemberController {
 	@RequestMapping("list")
 	public void list(Model model) {
 		//Model은 컨트롤러의 list를 views/list.jsp까지만 전달할 수 있는 객체 
-		//ArrayList<MemberVO> list = dao.list();
-		//model.addAttribute("list", list);
+		List<MemberVO> list = dao.list();
+		model.addAttribute("list", list);
 	}
 	
 	//https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EC%9E%90%EB%8F%99%EC%B0%A8

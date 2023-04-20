@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
-	
+	<!-- isnert, delete, update는 무조건 resultTyoe = "int"이므로
+	프로그래머가 써주지 않아도 이미 resultType = "int"가 있는 거으로 본다. -->
 	<insert id="create" parameterType="memberVO">
 		insert into member values (#{id}, #{pw}, #{name}, #{tel})
 	</insert>
@@ -13,6 +14,35 @@
 	<update id="up"  parameterType="memberVO">
 		update member set tel = #{tel} where id = #{id}
 	</update>
+	
+	<select id="one" parameterType="String" resultType = "memberVO">
+		select * from member where id = #{id}
+	</select>
+	
+	<select id = "all" resultType = "memberVO">
+		select * from member
+	</select>
+	
+	
+	
+	<!-- vo와 db table이 같을 때는 자동으로 컬럼명과 동일한 VO의 변수에 자동으로 넣어줌 
+	
+		 vo와 db table이 다를때는 수동으로 어떤 컬럼명에서 꺼내서 vo의 변수에 넣어줄지 mapping을 해주어야 함.
+	-->
+	
+<!-- 	
+ 	<select id="one2" parameterType="String" resultType = "map1">
+		select * from member where id = #{id}
+	</select>
+	
+	<resultMap type="memberVO" id="map1">
+		<result property="id" column = "id"/>
+		<result property="id" column = "pw"/>
+		<result property="id" column = "name"/>
+		<result property="id" column = "contact"/>
+	</resultMap> -->
+	
+	
 	
 </mapper>
 

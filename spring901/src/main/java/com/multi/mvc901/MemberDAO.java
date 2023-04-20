@@ -1,13 +1,7 @@
 package com.multi.mvc901;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Locale;
+import java.util.List;
 
-import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -31,11 +25,11 @@ public class MemberDAO { // CRUD
 //	}
 //	
 //	
-//	public ArrayList<MemberVO> list() {
-//		
-//		return list;
-//
-//	}
+	public List<MemberVO> list() {
+		List<MemberVO> list = my.selectList("member.all");
+		return list;
+		
+	}
 //
 //	// 메서드를 만드는 것 ==> 메서드 정의(define)!
 //	// 메서드를 정의했다고 실행되는 것은 아니다.!
@@ -51,6 +45,13 @@ public class MemberDAO { // CRUD
 		int result = my.delete("member.del", id);
 		
 		return result;
+	}
+
+	public MemberVO one(String id) {
+		
+		MemberVO vo = my.selectOne("member.one", id);
+		System.out.println(vo);
+		return vo;
 	}
 //
 //	// 1. 가방을 받아서 저장해두자.
@@ -72,4 +73,6 @@ public class MemberDAO { // CRUD
 		//                     namespace.id
 		return result;
 	}
+	
+
 }
