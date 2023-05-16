@@ -31,6 +31,15 @@ public class BbsPartyController {
 		//replyList
 		BbsPartyVO vo2 = dao.one(vo);
 		model.addAttribute("one", vo2);
-		
 	}
+	
+	@RequestMapping("bbsPartyList")
+	public void list2(PagePartyVO vo, Model model) {
+		vo.setStartEnd(vo.getPage());
+		List<BbsPartyVO> list = dao.all(vo);
+		model.addAttribute("list", list);
+	}
+	
+	
+	
 }

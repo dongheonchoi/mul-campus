@@ -1,6 +1,7 @@
 package com.multi.liveAlone.party.bbsParty;
 
 public class BbsPartyVO {
+	private int partyBbs_no;
 	private int partyBbs_num;
 	private String partyBbs_title;
 	private String partyBbs_writer;
@@ -13,6 +14,12 @@ public class BbsPartyVO {
 	private String partyBbs_category;
 	private String partyBbs_location;
 	private String partyBbs_writtenDate;
+	public int getPartyBbs_no() {
+		return partyBbs_no;
+	}
+	public void setPartyBbs_no(int partyBbs_no) {
+		this.partyBbs_no = partyBbs_no;
+	}
 	public int getPartyBbs_num() {
 		return partyBbs_num;
 	}
